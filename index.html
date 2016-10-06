@@ -8,7 +8,9 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="lib/css/github.css">
+    <!-- <link rel="stylesheet" href="lib/css/github.css"> -->
+
+<link rel="stylesheet" href="lib/css/color-brewer.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 	</head>
   <body>
@@ -99,13 +101,20 @@ robótica envolve matematica. npm te ajuda com isso. peças de lego. mqtt. reque
 </aside>
 </section>
 
-        <section>
-          <h1>Firmata</h1>
+        <!-- <section> -->
+          <!-- <h1>Firmata</h1> -->
+        <!-- </section> -->
+
+    <section data-background="#D9ABFF">
+  <img src="images/pc-arduino.png" alt="" />
 <aside class="notes">
   protocolo generico de comunicacao a partir de software hospedado em um computador. api q permite utilizar js. então... arduino nao ta rodando js de verdade. quem vai rodar o js pra gente,
 </aside>
-        </section>
+</section>
 
+    <section data-background="#D9ABFF">
+  <img src="images/pc-arduino-firmata.png" alt="" />
+</section>
         <section data-background="#f6dd25">
           <img src="images/johnny-five-logo.png"/>
 <aside class="notes">
@@ -115,7 +124,7 @@ robótica envolve matematica. npm te ajuda com isso. peças de lego. mqtt. reque
 
       <section>
         <pre>
-          <code data-trim data-noscape>
+          <code data-noscape>
 var five = require("johnny-five");
 
 five.Board().on("ready", function() {
@@ -126,6 +135,25 @@ five.Board().on("ready", function() {
           </code>
         </pre>
       </section>
+
+<section>
+        <pre>
+          <code data-trim data-noscape>
+int led = 13;
+
+void setup() {
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(led, HIGH);
+  delay(500);
+  digitalWrite(led, LOW);
+  delay(500);
+}
+          </code>
+        </pre>
+</section>
 
 <!-- GIF MUITO PESADO, COMPRIMIR? -->
       <section data-background="images/led-rgb.gif">
