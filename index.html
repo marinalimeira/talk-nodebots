@@ -1,134 +1,184 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>NodeBots</title>
+  <title>NodeBots</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme.css">
-    <!-- <link rel="stylesheet" href="lib/css/github.css"> -->
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="lib/css/color-brewer.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
-<link rel="stylesheet" href="lib/css/color-brewer.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-	</head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <!-- <section> -->
-          <!--   <h1>Olar</h1> -->
-          <!--   <ul> -->
-            <!--     <li>Estudante de Ciência da Computação</li> -->
-            <!--     <li>Mozillian</li> -->
-            <!--     <li>Developer na Code Miner</li> -->
-            <!--     <li>marinalimeira.com</li> -->
-            <!--     <li>Rails Girls Maceió</li> -->
-            <!--   </ul> -->
-          <!-- </section> -->
-
-        <section>
-          <h1><img src="images/nodebot.png" class="nodebot"/> NodeBots</h1>
-        </section>
-
-        <section>
-          <img src="images/nodejs-logo.png" class="nodejs"/>
-          <div class="plus"><b>+</b></div>
-          <img src="images/cyberman-dalek.png" class="dw"/>
-        </section>
-
-        <section data-background="#f4e11e">
-          <img src="images/js-logo.png"/>
-          <aside class="notes">
-undefined não é uma função?. todo mundo sabe js! js está em todo lugar *exemplos*, ffos. tá, mas como isso é possível?.
-            Aplicações desktop (spotify), frameworks web, servidores e até dá para encontrar alguns artigos na web falando sobre mineração de dados.
-          </aside>
-        </section>
-        <!-- colocara logo dos frames, um desktop, um front,  um back, aplicativos [cordova] -->
-
-        <section>
-          <h1>node serialport</h1>
-<aside class="notes">
-primeiro commit em 2010, por chris williams. repo bagunçado.
-</aside>
-        </section>
-
-        <section>
-          <h1><a href="https://github.com/EmergingTechnologyAdvisors/node-serialport/commit/925c60d">do not use.</a></h1>
-
-<aside class="notes">
-  originalmente, para mexer com porta serial, pyserial, but not so good. jsconf europeia, jquery.
-</aside>
-        </section>
-
-         <section>
-          <pre>
-            <code data-trim data-noescape>
-$("livingroom").bind("motion", function() {
-  $(this).find("lights").brightness("75%").dimAfter("120s");
-});
-            </code>
-          </pre>
-
-<aside class="notes">
-  modelar objetos do mundo real. na pratica... abrir porta. *DO NOT NEED PYTHON*, pq nao outra linguagem? clojure, scala..? comparacao com ruby.
-</aside>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1><img src="images/nodebot.png" class="nodebot"/> NodeBots</h1>
       </section>
 
-        <section>
-          <img src="images/npm-logo.png"/>
-        </section>
+      <!-- <section> -->
+      <!--   <h1>Olar</h1> -->
+      <!--   <ul> -->
+      <!--     <li>Estudante de Ciência da Computação</li> -->
+      <!--     <li>Mozillian</li> -->
+      <!--     <li>Developer na Code Miner</li> -->
+      <!--     <li>marinalimeira.com</li> -->
+      <!--     <li>Rails Girls Maceió</li> -->
+      <!--   </ul> -->
+      <!-- </section> -->
 
-        <section data-background="#E2F1FF">
-          <img src="images/npm-graph.png"/>
-<aside class="notes">
-  450 modulos por dia/ 330k no total. pq nao usar isso em um programa q vc fez
-robótica envolve matematica. npm te ajuda com isso. peças de lego. mqtt. request + infravermelho.
-</aside>
-        </section>
+      <section>
+        <h1>Robótica &#9733;</h1>
+        <h2 class="fragment" data-fragment-index="1">Eletrônica</h2>
+        <h2 class="fragment" data-fragment-index="2">Linguagens de Programação de Baixo nível</h2>
+      </section>
 
-        <section>
-          <img src="images/arduino-uno.svg" style="height:500px;"/>
-<aside class="notes">
-  open source. prototipagem barata. go to mercado livre, 35 reais. go to aliexpress, melhor ainda :) arduino nano. se quebrar, nao é o fim do mundo. protipagem rapida. .
-</aside>
-        </section>
+      <section>
+        <img src="images/nodejs-logo.png" class="nodejs"/>
+        <div class="plus"><b>+</b></div>
+        <img src="images/cyberman-dalek.png" class="dw"/>
+      </section>
 
-<section>
-          <img src="images/sensors.png"/>
-<aside class="notes">
-  distancia, modulo bluetooth, sensor infravermelho, relay pra controlar envergia. acender lampada.
-</aside>
-</section>
+      <section data-background="#f4e11e">
+        <img src="images/js-logo.png"/>
+        <aside class="notes">
+          undefined não é uma função?. todo mundo sabe js! js está em todo lugar *exemplos*, ffos. tá, mas como isso é possível?.
+          Aplicações desktop (spotify), frameworks web, servidores e até dá para encontrar alguns artigos na web falando sobre mineração de dados.
+        </aside>
+      </section>
 
-        <!-- <section> -->
-          <!-- <h1>Firmata</h1> -->
-        <!-- </section> -->
+      <section>
+        <img src="images/npm-logo.png"/>
+      </section>
 
-    <section data-background="#D9ABFF">
-  <img src="images/pc-arduino.png" alt="" />
-<aside class="notes">
-  protocolo generico de comunicacao a partir de software hospedado em um computador. api q permite utilizar js. então... arduino nao ta rodando js de verdade. quem vai rodar o js pra gente,
-</aside>
-</section>
+      <section data-background="#E2F1FF">
+        <img src="images/npm-graph.png"/>
+        <aside class="notes">
+          450 modulos por dia/ 330k no total. pq nao usar isso em um programa q vc fez
+          robótica envolve matematica. npm te ajuda com isso. peças de lego. mqtt. request + infravermelho.
+        </aside>
+      </section>
 
-    <section data-background="#D9ABFF">
-  <img src="images/pc-arduino-firmata.png" alt="" />
-</section>
-        <section data-background="#f6dd25">
-          <img src="images/johnny-five-logo.png"/>
-<aside class="notes">
-  rick waldron, jquery. modulo que nos dá esses objetos do mundo real, que disparam eventos.
-</aside>
-        </section>
+      <section>
+        <img src="images/mqtt-npm.png"/>
+      </section>
+
+      <section>
+        <img src="images/vektor-npm.png"/>
+        <aside class="notes">
+          Vecks, Vektor, Algebra...
+        </aside>
+      </section>
+
+      <section  data-background="#D9ABFF">
+        <img src="images/r3.png" alt="">
+      </section>
+
+      <section data-background="#D9ABFF">
+        <h3 style="background-color: #fff;"><!--d(u, v) = --><em>$\sqrt{(4 - 3)^2 +(5 - 6)^2 + (0 - 5)^2}$</em></h3>
+      </section>
 
       <section>
         <pre>
-          <code data-noscape>
-var five = require("johnny-five");
+          <code data-trim data-noescape>
+var vector = require('vektor').vector, u, v;
+
+u = new v(4, 5, 0);
+v = new v(3, 6, 5);
+
+u.distanceFrom(v);
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h1>node serialport</h1>
+        <aside class="notes">
+          primeiro commit em 2010, por chris williams. repo bagunçado.
+        </aside>
+      </section>
+
+      <section>
+        <h3>"I would actually apply the theory of increasing developer happiness from Ruby as the reason to use node.js for building robot PROTOTYPES. It is lightweight, simple, and easy to make complex reactionary systems with little effort."</h3>
+        - Chris Williams
+        <aside class="notes">
+          originalmente, para mexer com porta serial, pyserial, but not so good.
+        </aside>
+      </section>
+
+      <section>
+        <h1><a href="https://github.com/EmergingTechnologyAdvisors/node-serialport/commit/925c60d">do not use.</a></h1>
+      </section>
+
+      <section>
+        <pre>
+          <code data-trim data-noescape>
+$("livingroom").bind("motion", function() {
+  $(this).find("lights").brightness("75%").dimAfter("120s");
+});
+          </code>
+        </pre>
+
+        <aside class="notes">
+          jsconf europeia
+          modelar objetos do mundo real. na pratica... abrir porta. *DO NOT NEED PYTHON*, pq nao outra linguagem? clojure, scala..? comparacao com ruby.
+        </aside>
+      </section>
+
+      <section data-background="#f6dd25">
+        <img src="images/johnny-five-logo.png"/>
+        <aside class="notes">
+          rick waldron, jquery. modulo que nos dá esses objetos do mundo real, que disparam eventos.
+        </aside>
+      </section>
+
+      <section>
+        <img src="images/arduino-uno.svg" style="height:500px;"/>
+        <aside class="notes">
+          open source. prototipagem barata. go to mercado livre, 35 reais. go to aliexpress, melhor ainda :) arduino nano. se quebrar, nao é o fim do mundo. protipagem rapida. .
+        </aside>
+      </section>
+
+      <section>
+        <img src="images/sensors.png"/>
+        <aside class="notes">
+          distancia, modulo bluetooth, sensor infravermelho, relay pra controlar envergia. acender lampada.
+        </aside>
+      </section>
+
+      <section data-background="#D9ABFF">
+        <img src="images/pc-arduino.png" alt="" />
+        <aside class="notes">
+          protocolo generico de comunicacao a partir de software hospedado em um computador. api q permite utilizar js. então... arduino nao ta rodando js de verdade. quem vai rodar o js pra gente,
+        </aside>
+      </section>
+
+      <section data-background="#D9ABFF">
+        <img src="images/pc-arduino-firmata.png" alt="" />
+        <aside class="notes">
+          resolve as tretas com modulo de bluetooth ouo aspberrypi
+        </aside>
+      </section>
+
+      <section>
+        <h1>Ou seja,</h1>
+        <h2>
+          <div class="fragment" data-fragment-index="1">Arduino</div>
+          <div class="fragment" data-fragment-index="2">Componentes Eletrônicos</div>
+          <div class="fragment" data-fragment-index="3">Johnny-Five</div>
+        </h2>
+      </section>
+
+      <section>
+        <pre>
+          <code data-trim data-noscape>
+var five = require("johnny-five"), led;
 
 five.Board().on("ready", function() {
-  var led = new five.Led(13);
+  led = new five.Led(13);
 
   led.blink(500);
 });
@@ -136,7 +186,7 @@ five.Board().on("ready", function() {
         </pre>
       </section>
 
-<section>
+      <section>
         <pre>
           <code data-trim data-noscape>
 int led = 13;
@@ -153,19 +203,23 @@ void loop() {
 }
           </code>
         </pre>
-</section>
+      </section>
 
-<!-- GIF MUITO PESADO, COMPRIMIR? -->
+      <section>
+        <h1>DEMO</h1>
+      </section>
+
+      <!-- GIF MUITO PESADO, COMPRIMIR? -->
       <section data-background="images/led-rgb.gif">
         <pre class="rgb-demo">
-            <code data-trim data-noescape>
-var five = require("johnny-five");
+          <code data-trim data-noescape>
+var five = require("johnny-five"), rgb, index, rainbow;
 
 five.Board().on("ready", function() {
-  var rgb = new five.Led.RGB({pins: [6, 5, 3], isAnode: true});
+  rgb = new five.Led.RGB({pins: [6, 5, 3], isAnode: true});
 
-  var index = 0;
-  var rainbow = ["red", "orangered", "yellow", "seagreen",
+  index = 0;
+  rainbow = ["red", "orangered", "yellow", "seagreen",
                  "#2196F3", "royalblue", "rebeccapurple"];
 
   this.loop(600, function() {
@@ -177,24 +231,37 @@ five.Board().on("ready", function() {
 });
           </code>
         </pre>
-    </section>
+      </section>
 
-    <section data-background="#D9ABFF">
-      <img src="images/mqtt.png"/>
-    </section>
+      <section data-background="#D9ABFF">
+        <img src="images/mqtt.png"/>
+      </section>
 
 
-    <!-- <section> -->
+      <!-- <section> -->
       <!-- <img src="images/ardrone2&#45;404.png" alt="" /> -->
       <!-- <a href="github.com/felixge/node&#45;ar&#45;drone">drones</a> -->
       <!-- <aside class="notes"> -->
-          <!-- da pra comprar o robo, ja tem modulo npm pra controlar eles. evento nodecopter. A.R. Drone 2.0 -->
+      <!-- da pra comprar o robo, ja tem modulo npm pra controlar eles. evento nodecopter. A.R. Drone 2.0 -->
       <!-- </aside> -->
-    <!-- </section> -->
+      <!-- </section> -->
 
-    <section>
-      <h1><a href="github.com/willmendesneto/build-checker">build-checker</a></h1>
-    </section>
+      <section>
+        <h1><a href="github.com/willmendesneto/build-checker">build-checker</a></h1>
+      </section>
+
+      <section>
+        <h1>E agora?</h1>
+      </section>
+
+      <section>
+        <img class="learning" src="images/johnny-five-io.png" alt="" />
+        <h4><a href="http://johnny-five.io/">johnny-five.io</a></h4>
+      </section>
+
+      <section>
+        <img class="learning" src="images/make.png" alt="" />
+      </section>
 
       <section>
         <h1>Obrigada!</h1>
@@ -207,19 +274,24 @@ five.Board().on("ready", function() {
   <script src="js/reveal.js"></script>
 
   <script>
-    Reveal.initialize({
-      history: true,
-      slideNumber: true,
-      transition: 'fade',
-      backgroundTransition: 'none',
+  Reveal.initialize({
+    history: true,
+    slideNumber: true,
+    transition: 'fade',
+    backgroundTransition: 'none',
+    math: {
+        mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+    },
 
-      dependencies: [
-        { src: 'plugin/markdown/marked.js' },
-        { src: 'plugin/markdown/markdown.js' },
-        { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-      ]
-    });
+    dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/math/math.js', async: true }
+    ]
+  });
   </script>
 </body>
 </html>
