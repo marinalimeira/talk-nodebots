@@ -11,7 +11,11 @@
   <link rel="stylesheet" href="lib/css/color-brewer.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-
+<!-- hm quem aqui é desenvovedor front-end??  VOCES SABEM JAVASCRIPT!
+Vamos aproveitar isso e construir robôs!
+definir mqtt
+ajeitar caixa do código
+-->
 <body>
   <div class="reveal">
     <div class="slides">
@@ -19,21 +23,21 @@
         <h1><img src="images/nodebot.png" class="nodebot"/> NodeBots</h1>
       </section>
 
-      <!-- <section> -->
-      <!--   <h1>Olar</h1> -->
-      <!--   <ul> -->
-      <!--     <li>Estudante de Ciência da Computação</li> -->
-      <!--     <li>Mozillian</li> -->
-      <!--     <li>Developer na Code Miner</li> -->
-      <!--     <li>marinalimeira.com</li> -->
-      <!--     <li>Rails Girls Maceió</li> -->
-      <!--   </ul> -->
-      <!-- </section> -->
+      <section>
+        <h2>Marina Limeira</h2>
+        <h2 class="about">Ciência da Computação <img src="images/ufal.png" width="30px" alt=""></h2>
+        <h2 class="about">Mozillian</h2>
+        <h2 class="about">Desenvolvedora <img src="images/codeminer.png" alt=""></h2>
+        <h2 class="about"><img src="images/rg.png" width="50px"alt=""><!--<a href="http://www.railsgirls.com/maceio">--> Rails Girls Maceió<!--</a>--></h2>
+        <h2 style="font-size: 1.3em;"><a href="http://www.marinalimeira.com">marinalimeira.com</a></h2>
+        <!-- </div> -->
+      </section>
 
       <section>
         <h1>Robótica &#9733;</h1>
         <h2 class="fragment" data-fragment-index="1">Eletrônica</h2>
         <h2 class="fragment" data-fragment-index="2">Linguagens de Programação de Baixo nível</h2>
+        <h2 class="fragment" data-fragment-index="3">Matemática</h2>
       </section>
 
       <section>
@@ -86,9 +90,12 @@
           <code data-trim data-noescape>
 var vector = require('vektor').vector, u, v;
 
+// cria um novo vetor u, onde x = 4, y = 5 e z = 0
 u = new v(4, 5, 0);
+// cria um novo vetor v, onde x = 3, y = 6 e z = 5
 v = new v(3, 6, 5);
 
+// retorna a distância de u para v
 u.distanceFrom(v);
           </code>
         </pre>
@@ -110,14 +117,14 @@ u.distanceFrom(v);
       </section>
 
       <section>
-        <h1><a href="https://github.com/EmergingTechnologyAdvisors/node-serialport/commit/925c60d">do not use.</a></h1>
+        <h1><a href="https://github.com/EmergingTechnologyAdvisors/node-serialport/commit/925c60d" target="_blank">do not use.</a></h1>
       </section>
 
       <section>
         <pre>
           <code data-trim data-noescape>
-$("livingroom").bind("motion", function() {
-  $(this).find("lights").brightness("75%").dimAfter("120s");
+$("door").bind("open", function() {
+  $(this).find("lights").brightness("75%");
 });
           </code>
         </pre>
@@ -136,10 +143,18 @@ $("livingroom").bind("motion", function() {
       </section>
 
       <section>
-        <img src="images/arduino-uno.svg" style="height:500px;"/>
+        <h2><a href="https://github.com/rwaldron/johnny-five/" target="_blank">github.com/rwaldron/johnny-five/</a></h2>
+      </section>
+
+      <section>
+        <img src="images/arduino-uno.svg" style="height:460px;"/>
         <aside class="notes">
           open source. prototipagem barata. go to mercado livre, 35 reais. go to aliexpress, melhor ainda :) arduino nano. se quebrar, nao é o fim do mundo. protipagem rapida. .
         </aside>
+      </section>
+
+      <section data-background="#D9ABFF">
+        <img src="images/arduino_explained.png" alt="">
       </section>
 
       <section>
@@ -172,37 +187,49 @@ $("livingroom").bind("motion", function() {
         </h2>
       </section>
 
+<!-- lado-a-lado com título embaixo. -->
       <section>
-        <pre>
-          <code data-trim data-noscape>
+        <pre class="blink">
+          <code class="blink" data-trim data-noscape>
 var five = require("johnny-five"), led;
 
+// quando a placa estiver pronta
 five.Board().on("ready", function() {
+
+  //crie um novo objeto do tipo Led
   led = new five.Led(13);
 
+  // mande o Led piscar
   led.blink(500);
 });
           </code>
         </pre>
-      </section>
-
-      <section>
-        <pre>
-          <code data-trim data-noscape>
+        <!-- <h2>blink.js</h2> -->
+        <pre class="blink">
+          <code class="blink" data-trim data-noscape>
+// variável led com valor 13
 int led = 13;
 
+// configuração das portas do Arduino
 void setup() {
+  // porta 13 será uma porta de saída
   pinMode(led, OUTPUT);
 }
 
+// equivalente a função main
 void loop() {
+  // envia sinal de "ligado" para a porta 13
   digitalWrite(led, HIGH);
+  // espera 500ms
   delay(500);
+  // envia sinal de "desligado" para a porta 13
   digitalWrite(led, LOW);
+  // espera 500ms
   delay(500);
 }
           </code>
         </pre>
+        <!-- <h2>blink.c</h2> -->
       </section>
 
       <section>
@@ -215,17 +242,22 @@ void loop() {
           <code data-trim data-noescape>
 var five = require("johnny-five"), rgb, index, rainbow;
 
+// quando a placa estiver pronta
 five.Board().on("ready", function() {
+  // crie um novo objeto do tipo Led nas portas 6, 5 e 3
   rgb = new five.Led.RGB({pins: [6, 5, 3], isAnode: true});
 
   index = 0;
+  // array que contem as cores do Led
   rainbow = ["red", "orangered", "yellow", "seagreen",
                  "#2196F3", "royalblue", "rebeccapurple"];
 
+  // em um loop que se repete a cada 600ms, faça
   this.loop(600, function() {
     if (index + 1 === rainbow.length) {
       index = 0;
     }
+    // defina a cor do Led como a cor da posição "[index]" do array
     rgb.color(rainbow[index++]);
   });
 });
@@ -237,7 +269,6 @@ five.Board().on("ready", function() {
         <img src="images/mqtt.png"/>
       </section>
 
-
       <!-- <section> -->
       <!-- <img src="images/ardrone2&#45;404.png" alt="" /> -->
       <!-- <a href="github.com/felixge/node&#45;ar&#45;drone">drones</a> -->
@@ -247,7 +278,15 @@ five.Board().on("ready", function() {
       <!-- </section> -->
 
       <section>
-        <h1><a href="github.com/willmendesneto/build-checker">build-checker</a></h1>
+        <h1><a href="http://github.com/willmendesneto/build-checker" target="_blank">build-checker</a></h1>
+      </section>
+
+      <section>
+        <h1>Só posso acender Led?</h1>
+      </section>
+
+      <section>
+        <h1>ArDrone</h1>
       </section>
 
       <section>
@@ -256,16 +295,20 @@ five.Board().on("ready", function() {
 
       <section>
         <img class="learning" src="images/johnny-five-io.png" alt="" />
-        <h4><a href="http://johnny-five.io/">johnny-five.io</a></h4>
+        <h4><a href="http://johnny-five.io/" target="_blank">johnny-five.io</a></h4>
       </section>
 
       <section>
-        <img class="learning" src="images/make.png" alt="" />
+        <img src="images/nodebots-community.png" alt="" />
+      </section>
+
+      <section>
+        <img src="images/make.png" alt="" />
       </section>
 
       <section>
         <h1>Obrigada!</h1>
-        <a href="http://twitter.com/marinalimeira_">@marinalimeira_</a>
+        <a href="http://twitter.com/marinalimeira_" target="_blank">@marinalimeira_</a>
       </section>
     </div>
   </div>
