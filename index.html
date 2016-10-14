@@ -11,11 +11,7 @@
   <link rel="stylesheet" href="lib/css/color-brewer.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<!-- hm quem aqui é desenvovedor front-end??  VOCES SABEM JAVASCRIPT!
-Vamos aproveitar isso e construir robôs!
-definir mqtt
-ajeitar caixa do código
--->
+
 <body>
   <div class="reveal">
     <div class="slides">
@@ -26,11 +22,10 @@ ajeitar caixa do código
       <section>
         <h2>Marina Limeira</h2>
         <h2 class="about">Ciência da Computação <img src="images/ufal.png" width="30px" alt=""></h2>
-        <h2 class="about">Mozillian</h2>
         <h2 class="about">Desenvolvedora <img src="images/codeminer.png" alt=""></h2>
-        <h2 class="about"><img src="images/rg.png" width="50px"alt=""><!--<a href="http://www.railsgirls.com/maceio">--> Rails Girls Maceió<!--</a>--></h2>
+        <h2 class="about">Mozillian</h2>
+        <h2 class="about"><img src="images/rg.png" width="50px"alt=""> Rails Girls Maceió</h2>
         <h2 style="font-size: 1.3em;"><a href="http://www.marinalimeira.com">marinalimeira.com</a></h2>
-        <!-- </div> -->
       </section>
 
       <section>
@@ -52,6 +47,18 @@ ajeitar caixa do código
           undefined não é uma função?. todo mundo sabe js! js está em todo lugar *exemplos*, ffos. tá, mas como isso é possível?.
           Aplicações desktop (spotify), frameworks web, servidores e até dá para encontrar alguns artigos na web falando sobre mineração de dados.
         </aside>
+      </section>
+
+      <section>
+        <h1>Eventos!</h1>
+        <pre class="fragment" data-fragment-index="1">
+          <code data-trim data-noescape>
+// quando o documento estiver pronto
+document.on("ready", function(){
+  // faça alguma coisa legal
+});
+          </code>
+        </pre>
       </section>
 
       <section>
@@ -123,7 +130,10 @@ u.distanceFrom(v);
       <section>
         <pre>
           <code data-trim data-noescape>
-$("door").bind("open", function() {
+// quando for detectado algum movimento na sala de estar
+$("livingroom").bind("motion", function() {
+
+  // encontre todas as luzes e defina o brilho como 75%
   $(this).find("lights").brightness("75%");
 });
           </code>
@@ -165,6 +175,18 @@ $("door").bind("open", function() {
       </section>
 
       <section data-background="#D9ABFF">
+        <img src="images/breadboard.png" width="1000px" alt="">
+      </section>
+
+      <section data-background="#D9ABFF">
+        <img src="images/breadboard2.png" width="1000px" alt="">
+      </section>
+
+      <section data-background="#D9ABFF">
+        <img src="images/led-rgb.png" width="600px" alt="">
+      </section>
+
+      <section data-background="#D9ABFF">
         <img src="images/pc-arduino.png" alt="" />
         <aside class="notes">
           protocolo generico de comunicacao a partir de software hospedado em um computador. api q permite utilizar js. então... arduino nao ta rodando js de verdade. quem vai rodar o js pra gente,
@@ -189,8 +211,8 @@ $("door").bind("open", function() {
 
 <!-- lado-a-lado com título embaixo. -->
       <section>
-        <pre class="blink">
-          <code class="blink" data-trim data-noscape>
+        <pre>
+          <code data-trim data-noscape>
 var five = require("johnny-five"), led;
 
 // quando a placa estiver pronta
@@ -204,15 +226,17 @@ five.Board().on("ready", function() {
 });
           </code>
         </pre>
-        <!-- <h2>blink.js</h2> -->
-        <pre class="blink">
-          <code class="blink" data-trim data-noscape>
+        <h2>blink.js</h2>
+      </section>
+
+      <section>
+        <pre>
+          <code data-trim data-noscape>
 // variável led com valor 13
 int led = 13;
 
-// configuração das portas do Arduino
+// configuração das portas do Arduino com a porta 13 sendo saída
 void setup() {
-  // porta 13 será uma porta de saída
   pinMode(led, OUTPUT);
 }
 
@@ -224,12 +248,15 @@ void loop() {
   delay(500);
   // envia sinal de "desligado" para a porta 13
   digitalWrite(led, LOW);
-  // espera 500ms
   delay(500);
 }
           </code>
         </pre>
-        <!-- <h2>blink.c</h2> -->
+        <h2>blink.c</h2>
+      </section>
+
+      <section data-background="#ffffff">
+        <img src="images/led-blink.gif" alt="">
       </section>
 
       <section>
@@ -257,7 +284,7 @@ five.Board().on("ready", function() {
     if (index + 1 === rainbow.length) {
       index = 0;
     }
-    // defina a cor do Led como a cor da posição "[index]" do array
+    // defina a cor do Led como a cor da posição atual do array
     rgb.color(rainbow[index++]);
   });
 });
@@ -286,7 +313,7 @@ five.Board().on("ready", function() {
       </section>
 
       <section>
-        <h1>ArDrone</h1>
+        <img src="images/ardrone.png" alt="">
       </section>
 
       <section>
@@ -303,10 +330,13 @@ five.Board().on("ready", function() {
       </section>
 
       <section>
-        <img src="images/make.png" alt="" />
+        <img src="images/make.png" alt="" height="600px"/>
       </section>
 
-      <section>
+      <section data-background="images/pusheen-dino.png"
+          data-background-repeat="no-repeat"
+          data-background-size="280px"
+          data-background-position="bottom">
         <h1>Obrigada!</h1>
         <a href="http://twitter.com/marinalimeira_" target="_blank">@marinalimeira_</a>
       </section>

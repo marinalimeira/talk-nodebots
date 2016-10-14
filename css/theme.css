@@ -8,9 +8,14 @@
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
+.pre-blink {
+  display: inline-block;
+}
 .blink {
-  display: inline;
-  width: 400px !important;
+  /*display: inline;*/
+  /*height: 700px !important;*/
+  /*margin: 0px 20px 0px 10px !important;*/
+  /*float: left !important;*/
 }
 
 .about {
@@ -41,7 +46,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .nodebot {
   width: 90px;
 }
-
 
 /*********************************************
  * GLOBAL STYLES
@@ -195,7 +199,7 @@ body {
   display: block;
   padding: 5px;
   overflow: auto;
-  max-height: 420px;
+  max-height: 600px;
   word-wrap: normal; }
 
 .reveal table {
