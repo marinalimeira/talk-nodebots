@@ -30,10 +30,13 @@ span.footer {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 2s linear 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
   position:relative;
+}
+
+.present .animated-link {
+	animation: typing 2s linear 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
 }
 
 .reveal a.animated-link {
