@@ -18,6 +18,13 @@ section.has-light-background, section.has-light-background h1, section.has-light
   /*float: left !important;*/
 }
 
+span.footer {
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+}
+
 .animated-link {
   width: 0;
   display: inline-block;
